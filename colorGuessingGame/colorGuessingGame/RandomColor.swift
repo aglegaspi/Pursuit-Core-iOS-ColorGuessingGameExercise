@@ -7,15 +7,7 @@
 import Foundation
 import UIKit
 
-func randomRed() -> CGFloat {
-    return CGFloat.random(in: 0.0...1.0)
-}
-
-func randomGreen() -> CGFloat {
-    return CGFloat.random(in: 0.0...1)
-}
-
-func randomBlue() -> CGFloat {
+func randomFloat() -> CGFloat {
     return CGFloat.random(in: 0.0...1.0)
 }
 
@@ -29,7 +21,7 @@ struct Color {
     }
     
     static func generateColor() -> Color {
-        return Color.init(red: randomRed(), green: randomGreen(), blue: randomBlue())
+        return Color.init(red: randomFloat(), green: randomFloat(), blue: randomFloat())
     }
     
     func compareValues() -> Int {
@@ -53,10 +45,7 @@ struct Color {
             }
             
         }
-        
-        
         return 0
-    
     }
     
 }

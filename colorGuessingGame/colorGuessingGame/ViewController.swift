@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     var counter = 0
     
     @IBOutlet weak var showMeTheColor: UIImageView!
-    
     @IBOutlet weak var winOrLose: UILabel!
     
     @IBAction func guessColor(_ sender: UIButton) {
@@ -23,10 +22,13 @@ class ViewController: UIViewController {
         if sender.tag == selection {
             self.winOrLose.text = "You Won"
             counter += 1
+            
         } else {
-            self.winOrLose.text = "You Lost"
+            self.winOrLose.text = "You Lost."
             counter = 0
+            //Game.resetGame()
         }
+        
         self.currentScore.text = "Current Score: \(counter)"
     }
     
@@ -36,9 +38,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // loads a color before the app fully loads
         self.showMeTheColor.backgroundColor = Color.generateColor().changeColor()
         
-        // Do any additional setup after loading the view.
+    
     }
 
 
