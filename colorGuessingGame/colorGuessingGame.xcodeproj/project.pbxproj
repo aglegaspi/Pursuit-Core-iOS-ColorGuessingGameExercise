@@ -14,7 +14,7 @@
 		ECF9195D22F0CA7000EB04B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF9195B22F0CA7000EB04B3 /* LaunchScreen.storyboard */; };
 		ECF9196822F0CA7000EB04B3 /* colorGuessingGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF9196722F0CA7000EB04B3 /* colorGuessingGameTests.swift */; };
 		ECF9197322F0CA7000EB04B3 /* colorGuessingGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF9197222F0CA7000EB04B3 /* colorGuessingGameUITests.swift */; };
-		ECF9198222F0CBF200EB04B3 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF9198122F0CBF200EB04B3 /* RandomColor.swift */; };
+		ECF9198222F0CBF200EB04B3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF9198122F0CBF200EB04B3 /* Color.swift */; };
 		ECF9E46122F19DB00043C530 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF9E46022F19DB00043C530 /* Game.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +49,7 @@
 		ECF9196E22F0CA7000EB04B3 /* colorGuessingGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = colorGuessingGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF9197222F0CA7000EB04B3 /* colorGuessingGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorGuessingGameUITests.swift; sourceTree = "<group>"; };
 		ECF9197422F0CA7000EB04B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ECF9198122F0CBF200EB04B3 /* RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
+		ECF9198122F0CBF200EB04B3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		ECF9E46022F19DB00043C530 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,7 +105,7 @@
 				ECF9195422F0CA6F00EB04B3 /* ViewController.swift */,
 				ECF9195622F0CA6F00EB04B3 /* Main.storyboard */,
 				ECF9E46022F19DB00043C530 /* Game.swift */,
-				ECF9198122F0CBF200EB04B3 /* RandomColor.swift */,
+				ECF9198122F0CBF200EB04B3 /* Color.swift */,
 				ECF9195922F0CA7000EB04B3 /* Assets.xcassets */,
 				ECF9195E22F0CA7000EB04B3 /* Info.plist */,
 			);
@@ -271,7 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECF9195522F0CA6F00EB04B3 /* ViewController.swift in Sources */,
-				ECF9198222F0CBF200EB04B3 /* RandomColor.swift in Sources */,
+				ECF9198222F0CBF200EB04B3 /* Color.swift in Sources */,
 				ECF9195322F0CA6F00EB04B3 /* AppDelegate.swift in Sources */,
 				ECF9E46122F19DB00043C530 /* Game.swift in Sources */,
 			);

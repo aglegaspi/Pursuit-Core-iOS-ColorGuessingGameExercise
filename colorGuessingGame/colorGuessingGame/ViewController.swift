@@ -10,40 +10,61 @@ import UIKit
 
 class ViewController: UIViewController {
     var counter = 0
-    
+    var highScore = 0
+
     @IBOutlet weak var showMeTheColor: UIImageView!
     @IBOutlet weak var winOrLose: UILabel!
+    @IBOutlet weak var currentScore: UILabel!
+    @IBOutlet weak var displayHighScore: UILabel!
+    
+    // persisting/saving the the color
+    var colorToGuess: Color! {
+        
+        // updating the UI the link btwn M and VC
+        didSet {
+            self.showMeTheColor.backgroundColor = colorToGuess.toUIColor()
+        }
+    }
     
     @IBAction func guessColor(_ sender: UIButton) {
-        let selection = Color.generateColor().compareValues()
         
-        self.showMeTheColor.backgroundColor = Color.generateColor().changeColor()
+        // guard: make sure that we can make a user colortype if not fatal error
+        guard let userGuessColorType = Color.ColorType(rawValue: sender.tag) else {
+            fatalError("Unexpected color type number entered in the button tag")
+        }
+        print(colorToGuess!)
+        print(userGuessColorType)
         
-        if sender.tag == selection {
+        if colorToGuess.isClosestTo(colorType: userGuessColorType) {
             self.winOrLose.text = "You Won"
             counter += 1
+            
+            if counter > highScore {
+                highScore = counter
+            }
             
         } else {
             self.winOrLose.text = "You Lost."
             counter = 0
-            //Game.resetGame()
         }
         
-        self.currentScore.text = "Current Score: \(counter)"
+        
+        
+        displayHighScore.text = "High Score: \(highScore)"
+        currentScore.text = "Current Score: \(counter)"
+        
+        updateColor()
     }
-    
-
-    @IBOutlet weak var currentScore: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // loads a color before the app fully loads
-        self.showMeTheColor.backgroundColor = Color.generateColor().changeColor()
-        
-    
+        updateColor()
     }
-
-
+    func updateColor() {
+        // updates a new color
+        colorToGuess = Color.generateColor()
+    }
 }
 
